@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'label1' }
+  agent any
   stages {
     stage ('BUILD') {
       steps {
@@ -10,7 +10,7 @@ pipeline {
         }
     }
    stage ('Clone') {
-		agent { label 'lable1' }
+		agent any
 		steps {
 			echo "Build a binary"
         sh ''' 
